@@ -1,3 +1,5 @@
+package example;
+
 public class Calculator {
 
     public Calculator() {
