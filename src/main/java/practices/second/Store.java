@@ -8,16 +8,24 @@ public class Store {
 
     private List<Product> tempProducts;
 
-    public Store(){
+    public Store() {
         tempProducts = new ArrayList<Product>();
     }
+
+    /**
+     *
+     * @return Invoice
+     */
     public Invoice createInvoice() {
         Invoice result = new Invoice(tempProducts);
         tempProducts.clear();
         return result;
     }
-
-    public void buy(Product bread) {
+    /**
+     *
+     * buy
+     */
+    public void buy(final Product bread) {
         tempProducts.add(bread);
     }
 }
