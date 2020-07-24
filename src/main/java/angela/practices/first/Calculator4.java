@@ -1,4 +1,4 @@
-package angela;
+package angela.practices.first;
 
 public class Calculator4 {
     private static final int LIMITE = 1000;

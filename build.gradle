@@ -16,28 +16,30 @@ dependencies {
 }
 
 test {
+    exclude 'practices/**'
     testLogging {
         events "failed"
         exceptionFormat "full"
+        showStandardStreams = true
     }
 }
 
 checkstyle {
     toolVersion '8.34'
     configFile file('config/checkstyle/checkstyle.xml')
-    checkstyleMain.source = "src/main/"
-    checkstyleMain.excludes = ["**/src/test/**"]
 }
 
 checkstyleMain {
     source ='src/main/java'
+    excludes = ['practices/**']
 }
 
 checkstyleTest {
     source ='src/main/java'
+    excludes = ['practices/**']
 }
 
-check.dependsOn jacocoTestReport
+//check.dependsOn jacocoTestReport
 
 test.finalizedBy("checkstyleMain")
-test.finalizedBy("jacocoTestReport")
+//test.finalizedBy("jacocoTestReport")
