@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Invoice {
-    List<Product> products;
+    private List<Product> products;
 
-    public Invoice(List<Product> tempProducts){
+    public Invoice(final List<Product> tempProducts) {
         //products = tempProducts;
         products = new ArrayList<>();
         for (Product product: tempProducts) {
@@ -14,6 +14,11 @@ public class Invoice {
         }
 
     }
+
+    /**
+     *
+     * @return int costTotal
+     */
     public int getTotalCost() {
         int totalCost = 0;
         for (Product product : products) {
@@ -21,7 +26,10 @@ public class Invoice {
         }
         return totalCost;
     }
-
+    /**
+     *
+     * @return String detail
+     */
     public String getDetail() {
         String header = "Cant Product Price Total";
         String tableLine = "--------------------------------------------------------";
