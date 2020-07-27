@@ -37,7 +37,7 @@ public class Invoice {
         String ending = "";
         //int aux = getTotalPerProduct();
         for (Product product: products){
-            body = body + Integer.toString(product.getQuantity()) + "-    " + product.getName() + " -   " + 
+            body = body + Integer.toString(product.getQuantity()) + "-" + product.getUnit() + "    "+ product.getName() + " -   " + 
             Integer.toString(product.getPrice()) + " " + Integer.toString(product.getTotalPerProduct()) + "\n";
         }
         ending = "Total" + "             " + Integer.toString(getTotalCost());

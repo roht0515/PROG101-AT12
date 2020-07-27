@@ -35,4 +35,25 @@ public class Product {
     public int getTotalPerProduct() {
         return quantity*price;
     }
+
+    /**
+     * @return 
+     */
+    public String getUnit(){
+        String unit = "";
+        switch (getName()){
+            case "bread":
+                unit = "u";
+            break;
+            case "milk":
+                unit = "lt";
+            break;
+            case "rice":
+                unit = "kg";
+            break;
+            default:
+            break;
+        }
+        return unit;
+    }
 }
