@@ -1,4 +1,4 @@
-package practices.second.laura;
+package laura.practices.second;
 
 public class Product {
     private String name;
@@ -33,7 +33,37 @@ public class Product {
      * @return int totalPerProduct
      */
     public int getTotalPerProduct() {
-        return quantity*price;
+        int total = 0;
+        total = quantity*price;
+        if (isPromo(this.name)){
+            switch (this.name) {
+                case "bread":
+                    if(quantity == 10){
+                        total = 9;
+                    }
+                    break;
+                case "milk":
+                    if(quantity == 5){
+                        total = 45;
+                    }
+                    break;
+                case "oil":
+                    if(quantity == 10){
+                        total = 90;
+                    }
+                    break;
+                case "rice":
+                    if(quantity == 20){
+                        total = 90;
+                    }
+                    break;
+            
+                default:
+                    
+                    break;
+            }
+        }
+        return total;
     }
 
     /**
@@ -52,8 +82,17 @@ public class Product {
                 unit = "kg";
             break;
             default:
+                unit = "u";
             break;
         }
         return unit;
+    }
+
+    /**
+     * @return boolean isPromo
+     */
+    public boolean isPromo(String nameProduct){
+        return (nameProduct == "bread" || nameProduct == "milk" || 
+                nameProduct == "oil" || nameProduct == "rice");
     }
 }

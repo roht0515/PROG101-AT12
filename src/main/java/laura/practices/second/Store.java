@@ -1,5 +1,4 @@
-package practices.second.laura;
-
+package laura.practices.second;
 
 import java.util.ArrayList;
 import java.util.List;

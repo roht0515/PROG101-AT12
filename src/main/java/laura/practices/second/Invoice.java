@@ -1,4 +1,4 @@
-package practices.second.laura;
+package laura.practices.second;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,7 +40,7 @@ public class Invoice {
             body = body + Integer.toString(product.getQuantity()) + "-" + product.getUnit() + "    "+ product.getName() + " -   " + 
             Integer.toString(product.getPrice()) + " " + Integer.toString(product.getTotalPerProduct()) + "\n";
         }
-        ending = "Total" + "             " + Integer.toString(getTotalCost());
+        ending = "Total" + "               " + Integer.toString(getTotalCost());
         return header + "\n" + tableLine + "\n" + body + tableLine + "\n" + ending;
     }
 }
