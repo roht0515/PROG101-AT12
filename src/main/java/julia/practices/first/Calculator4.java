@@ -1,3 +1,5 @@
+package julia.practices.first;
+
 import java.util.LinkedList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
