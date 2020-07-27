@@ -100,14 +100,14 @@ public class StoreTest {
         Store store = new Store();
         store.buy(new Product("bread", 1, 1));
         store.buy(new Product("milk", 10, 1));
-        store.buy(new Product("rice", 5, 5)
+        store.buy(new Product("rice", 5, 5));
         String expected = "Cant Product Price Total" + "\n" +
                           "--------------------------------------------------------" + "\n" +
                           "1-u    bread -   1 1" + "\n" +
                           "1-lt    milk -   10 10" + "\n" +
                           "5-kg    rice -   5 25" + "\n" +
                           "--------------------------------------------------------" + "\n" +
-                          "Total             11";
+                          "Total             36";
         String actual = store.createInvoice().getDetail();
         System.out.println(actual);
         assertEquals(expected, actual);

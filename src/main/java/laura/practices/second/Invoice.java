@@ -21,7 +21,7 @@ public class Invoice {
     public int getTotalCost() {
         int totalCost = 0;
         for (Product product : products) {
-            totalCost = totalCost + product.getPrice();
+            totalCost = totalCost + product.getTotalPerProduct();
         }
         return totalCost;
     }
