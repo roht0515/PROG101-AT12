@@ -1,4 +1,4 @@
-package angela.practices.third;
+package angela.practices.third.inheritance;
 
 /** Queen */
 public class Queen extends Figure {

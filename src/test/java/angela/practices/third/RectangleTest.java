@@ -1,4 +1,5 @@
 package angela.practices.third;
+import angela.practices.third.figure.Rectangle;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

@@ -1,4 +1,5 @@
-package angela.practices.third;
+package angela.practices.third.inheritance;
+
 import java.util.*;
 public class ListFigures {
     List <Figure> listFigures;

@@ -1,4 +1,4 @@
-package angela.practices.third;
+package angela.practices.third.inheritance;
 
 /**
  * Defines the general behavior of a figure
@@ -6,7 +6,7 @@ package angela.practices.third;
  * @author JRM
  *
  */
-abstract class Figure {
+public abstract class Figure {
     protected final static int WHITE = 0;
     protected final static int BLACK = 1;
 
@@ -16,7 +16,7 @@ abstract class Figure {
     protected String identifier;
 
     /** Every figure has a color */
-    Figure(int color) {
+    protected Figure(int color) {
         this.color = color;
         identifier = "";
     }

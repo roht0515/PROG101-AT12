@@ -1,13 +1,14 @@
-package angela.practices.third;
+package angela.practices.third.figure;
 
 public class Rectangle extends GeometricFigure {
     private int sideA, sideB;
-    private String type;
+    //private String type;
     public Rectangle(int color) {
         super(color);
         sideA = 0;
         sideB = 0;
     }
+
     public Rectangle(int sideA, int sideB) {
         super(1);
         this.sideA = sideA;
@@ -18,7 +19,12 @@ public class Rectangle extends GeometricFigure {
             this.type = "Rectangle";
         }
     }
-
+    public void setSideA(int side) {
+        sideA = side;
+    }
+    public void setSideB(int side) {
+        sideB = side;
+    }
     public String getFigureType(){
         return type;
     }

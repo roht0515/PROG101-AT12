@@ -1,4 +1,4 @@
-package angela.practices.third;
+package angela.practices.third.figure;
 
 import java.util.*;
 

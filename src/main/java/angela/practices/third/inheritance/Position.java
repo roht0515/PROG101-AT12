@@ -1,7 +1,7 @@
-package angela.practices.third;
+package angela.practices.third.inheritance;
 
 /** Position -row and column- of an object */
-class Position {
+public class Position {
     private int row, column;
 
     /** Initialization of the default state object (to 0) */
@@ -11,7 +11,7 @@ class Position {
     }
 
     /** Initialization according to a coordinate */
-    Position(int row, int column) {
+    public Position(int row, int column) {
         this.row = row;
         this.column = column;
     }

@@ -1,4 +1,5 @@
-package angela.practices.third;
+package angela.practices.third.inheritance;
+
 
 /** Castle */
 public class Castle extends Figure {

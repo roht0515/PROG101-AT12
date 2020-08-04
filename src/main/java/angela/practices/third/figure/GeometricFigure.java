@@ -1,4 +1,7 @@
-package angela.practices.third;
+package angela.practices.third.figure;
+
+import angela.practices.third.inheritance.Figure;
+import angela.practices.third.inheritance.Position;
 
 public abstract class GeometricFigure extends Figure {
     protected String tag;
