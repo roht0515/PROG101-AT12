@@ -1,3 +1,4 @@
+package rodrigo.practices.third;
 public abstract class GeometricFigure extends Figure {
     private String tag;
     public  GeometricFigure(final String tag) {

@@ -1,3 +1,4 @@
+package rodrigo.practices.third;
 abstract class Figure {
     protected final static int WHITE = 0;
     protected final static int BLACK = 1;

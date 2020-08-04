@@ -1,3 +1,4 @@
+package rodrigo.practices.third;
 public class Rectangle extends GeometricFigure {
     private int base;
     private int height;

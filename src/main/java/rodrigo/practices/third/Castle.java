@@ -1,3 +1,4 @@
+package rodrigo.practices.third;
 public class Castle extends Figure {
     public Castle(int color) {
         super(color);

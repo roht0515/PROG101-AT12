@@ -1,5 +1,5 @@
+package rodrigo.practices.third;
 import java.util.ArrayList;
-
 public class FiguresCollection {
     private  ArrayList<Figure> figures;
 

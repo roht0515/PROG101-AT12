@@ -1,3 +1,4 @@
+package rodrigo.practices.third;
 public class Queen extends Figure {
     public Queen(int color) {
         super(color);

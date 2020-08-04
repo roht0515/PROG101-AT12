@@ -1,3 +1,4 @@
+package rodrigo.practices.third;
 public class Square extends Rectangle {
     public Square(int base, int height, String tag) {
         super(base, height, tag);

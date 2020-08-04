@@ -1,3 +1,4 @@
+package rodrigo.practices.third;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class FiguresTesting {

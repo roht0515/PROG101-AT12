@@ -1,3 +1,4 @@
+package rodrigo.practices.third;
 public class Position {
     private int row, column;
 
