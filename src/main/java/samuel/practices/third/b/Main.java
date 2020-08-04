@@ -1,9 +1,16 @@
 package samuel.practices.third.b;
-class Main {
-    public static void main(String[] args) {
-        Rectangle rec = new Rectangle();
-        rec.setBase(6);
-        rec.setHeight(3);
-        rec.drawTxt();
+
+public class Main {
+
+    public Main() {
+        Menu a = new Menu();
+        a.init();
     }
+
+    /*
+    public static void main(final String[] args) {
+        Menu a = new Menu();
+        a.init();
+    }
+*/
 }

@@ -1,21 +1,20 @@
 package samuel.practices.third.b;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import org.junit.Test;
 import static org.junit.Assert.*;
-
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-public class RectangleTest {
-
+public class SquareTest {
+    
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
     private final PrintStream originalOut = System.out;
     private final PrintStream originalErr = System.err;
-    
+
     @Before
     public void setUpStreams() {
         System.setOut(new PrintStream(outContent));
@@ -27,43 +26,49 @@ public class RectangleTest {
         System.setOut(originalOut);
         System.setErr(originalErr);
     }
+
     @Test
-    public void testAreaRectangle() {
-        Rectangle rectangle = new Rectangle();
-        rectangle.setBase(6);
-        rectangle.setHeight(3);
-        rectangle.setArea(rectangle.area());
-        double expected = 18.0;
-        double actual = rectangle.getArea();
+    public void testAreaSquare() {
+        Square square = new Square(5);
+        square.setArea(square.area());
+        double expected = 25;
+        double actual = square.getArea();
         assertEquals(expected, actual, 0.01);
     }
 
-   
+    @Test
+    public void testChangeAreaSquare() {
+        Square square = new Square(5);
+        square.setSide(10);
+        square.setArea(square.area());
+        double expected = 100;
+        double actual = square.getArea();
+        assertEquals(expected, actual, 0.01);
+    }
+
     @Test
     public void testPrintDescription() {
-        Rectangle rectangle = new Rectangle();
-        rectangle.setBase(6);
-        rectangle.setHeight(3);
-        rectangle.setTag("C-5");
-        rectangle.setArea(rectangle.area());
-        rectangle.printDescription();
+        Square square = new Square(10);
+        square.setTag("C-5");
+        square.setArea(square.area());
+        square.printDescription();
         String expected = outContent.toString();
         String actual = "Tag : C-5" + "\n";
-              actual += "Figure Type : Rectangle" + "\n";
-              actual += "Area : 18.0" + "\n";
+              actual += "Figure Type : Square" + "\n";
+              actual += "Area : 100.0" + "\n";
         assertEquals(expected, actual);
     }
 
     @Test
     public void testDrawTxt() {
-        Rectangle rectangle = new Rectangle();
-        rectangle.setBase(6);
-        rectangle.setHeight(3);
-        rectangle.drawTxt();
+        Square square = new Square(5);
+        square.drawTxt();
         String expected = outContent.toString();
-        String actual = "******" + "\n";
-              actual += "******" + "\n";
-              actual += "******" + "\n";
+        String actual = "*****" + "\n";
+              actual += "*****" + "\n";
+              actual += "*****" + "\n";
+              actual += "*****" + "\n";
+              actual += "*****" + "\n";
         assertEquals(expected, actual);
     }
 }

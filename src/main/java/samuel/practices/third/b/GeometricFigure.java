@@ -4,40 +4,40 @@ public class GeometricFigure extends Figure {
 
   private String type;
   private String tag;
-  private int area;
+  private double area;
 
-  public GeometricFigure(String type) {
+  public GeometricFigure(final String type) {
     this.type = type;
-    area = 0;
+    area = 0.0;
   }
-
+  /** getTag */
   public String getTag() {
     return tag;
   }
-
+  /** getFigureType */
   public String getFigureType() {
     return type;
   }
-
-  public int getArea() {
+  /** getArea */
+  public double getArea() {
     return area;
   }
-
-  public void  setTag(final String tag){
+  /** setTag */
+  public void setTag(final String tag) {
     this.tag = tag;
   }
-
-  public void setFigureType(final String type){
+  /** setFigureType */
+  public void setFigureType(final String type) {
     this.type = type;
   }
-
-  public void setArea(final int area) {
+  /** setArea */
+  public void setArea(final double area) {
     this.area = area;
   }
-
-  public void printDescription() {
-    System.out.println("Tag :" + tag);
-    System.out.println("Figure Type:" + type);
-    System.out.println("Area :" + area);
+  /** printDescription */
+  public final void printDescription() {
+    System.out.println("Tag : " + tag);
+    System.out.println("Figure Type : " + type);
+    System.out.println("Area : " + area);
   }
 }
