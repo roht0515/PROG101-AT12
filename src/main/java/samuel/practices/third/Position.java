@@ -10,7 +10,7 @@ class Position {
   }
 
   /** Initialization according to a coordinate */
-  Position(int row, int column) {
+  Position(final int row, final int column) {
     this.row = row;
     this.column = column;
   }
@@ -23,12 +23,12 @@ class Position {
     return this.column;
   }
 
-  public void setRaw(int row) {
+  public void setRaw(final int row) {
     this.row = row;
   }
 
-  public void setColumn(int column) {
+  public void setColumn(final int column) {
     this.column = column;
   }
 
-} // Position
+}
