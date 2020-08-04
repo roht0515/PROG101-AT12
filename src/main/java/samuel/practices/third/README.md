@@ -24,3 +24,12 @@
 
 #### Class Diagram 
 ![](classDiagram2.png)
+
+
+1. Answer the following questions:
+  - Show the difference between a class and an object.
+    Object is instance of class
+  - Which steps are involved in the instantiation's process of an object ?
+    1. Declare variable name with an object type
+    1. Use **new** for create the object
+  - How is an object instantiated in Java ?
