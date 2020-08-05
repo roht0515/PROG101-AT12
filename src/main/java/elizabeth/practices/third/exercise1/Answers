@@ -1,0 +1,14 @@
+● Which methods can be really invoked on the collection elements?
+R.- The only methods that the collection could invoke would be the base class methods.
+
+● If Castle class has implemented void castle() method, could it be possible
+to invoke that method from a reference to the base class? Why?
+R.- No, because this method is only of derived class.
+
+● What should we have to do in order to be able to use the previous void castle()
+method from an object of Castle class that is pointed by a reference to Figure class?
+R.- Casting the "Figure" object  to "Castle" would then use the castle() method.
+
+● What should we do to know exactly to which class belongs every object pointed by a
+ reference to the base class?
+ R.- Asking if an object is an instance of a specific class Using the keyword "instanceOf"
