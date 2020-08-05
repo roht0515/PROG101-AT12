@@ -1,4 +1,4 @@
-package laura.practices.first;
+package rodrigo.practices.first;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
