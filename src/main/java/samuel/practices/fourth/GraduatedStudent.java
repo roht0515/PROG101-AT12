@@ -1,18 +1,21 @@
 package samuel.practices.fourth;
 
-public class GraduatedStudent extends Student{
+public class GraduatedStudent extends Student {
 
     protected static final int APPROVAL_NOTE = 71;
-
+    /**
+     *
+     * @return String computeCourseGrade
+     */
     public String computeCourseGrade() {
 
         int score = 0;
-        for (int i = 0; i < test.length; i++) {
-            score += test[i];
+        for (int i = 0; i < NUM_OF_TESTS; i++) {
+            score += getTestScore(i);
         }
-        double note =  score / NUM_OF_TESTS;
+        double average =  score / NUM_OF_TESTS;
 
-        if (note >= APPROVAL_NOTE) {
+        if (average >= APPROVAL_NOTE) {
             return "Yes";
         }
         return "No";
