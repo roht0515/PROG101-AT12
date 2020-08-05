@@ -2,7 +2,7 @@ package julia.practices.fourth;
 public abstract class Student {
     public static final int NUM_OF_TEST = 3;
     private String name;
-    private int[] test;
+    private int[] tests;
     private String courseGrade;
 
     public Student() {
@@ -10,7 +10,7 @@ public abstract class Student {
     public Student(final String nam) {
         name = nam;
         courseGrade = "reprobate";
-        test = new int[NUM_OF_TEST];
+        tests = new int[NUM_OF_TEST];
     }
 
     /**
@@ -34,7 +34,7 @@ public abstract class Student {
      * @return array int
      */
     public int[] getTest() {
-        return test;
+        return tests;
     }
 
     /**
@@ -42,7 +42,7 @@ public abstract class Student {
      * @param
      */
     public void setTest(final int[] test) {
-        this.test = test;
+        tests = test;
     }
 
     /**
@@ -65,21 +65,19 @@ public abstract class Student {
      *
      * @return double promtest score
      */
-    public double getPromTestScore() {
-        double res = 0;
-        for (int tests: test) {
-            res += tests;
+    public int getPromTestScore() {
+        int  res = 0;
+        for (int test: tests) {
+            res += test;
         }
-        return res;
+        res = res / NUM_OF_TEST;
+        return (int) res;
     }
 
     /**
      *
      *@param
      */
-    public void addScore(final int[] scores) {
-        test = scores;
-    }
 
     public abstract String computeCourseGrade();
 }

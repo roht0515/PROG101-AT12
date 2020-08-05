@@ -7,9 +7,9 @@ public class StudentTest {
 
     @Test
     public  void testReturnApprovedGraduateStudent() {
-        int [] test = new int [] {80, 90, 60};
+        int [] test = new int []{80, 90, 60};
         Student student = new GraduateStudent("Juan");
-        student.addScore(test);
+        student.setTest(test);
         String expected = "approved";
         String actual = student.computeCourseGrade();
         assertEquals(expected, actual);
@@ -17,9 +17,9 @@ public class StudentTest {
 
     @Test
     public  void testReturnReprobateGraduateStudent() {
-        int [] test = new int [] {70, 65, 69};
+        int [] test = new int []{70, 65, 69};
         Student student = new GraduateStudent("Luis");
-        student.addScore(test);
+        student.setTest(test);
         String expected = "reprobate";
         String actual = student.computeCourseGrade();
         assertEquals(expected, actual);
@@ -28,9 +28,9 @@ public class StudentTest {
 
     @Test
     public  void testReturnApprovedUnderGraduateStudent() {
-        int [] test = new int [] {80, 40, 60};
+        int [] test = new int []{80, 40, 60};
         Student student = new UnderGraduateStudent("Silvia");
-        student.addScore(test);
+        student.setTest(test);
         String expected = "approved";
         String actual = student.computeCourseGrade();
         assertEquals(expected, actual);
@@ -38,12 +38,22 @@ public class StudentTest {
 
     @Test
     public  void testReturnReprobateUnderGraduateStudent() {
-        int [] test = new int [] {60, 40, 30};
+        int [] test = new int []{60, 40, 30};
         Student student = new UnderGraduateStudent("carlos");
-        student.addScore(test);
+        student.setTest(test);
         String expected = "reprobate";
         String actual = student.computeCourseGrade();
         assertEquals(expected, actual);
 
+    }
+
+    @Test
+    public void testGetPromStudent() {
+        int [] test = new int []{60, 40, 30};
+        Student student = new GraduateStudent("roberto");
+        student.setTest(test);
+        int expected = 43;
+        int actual = student.getPromTestScore();
+        assertEquals(expected, actual);
     }
 }
