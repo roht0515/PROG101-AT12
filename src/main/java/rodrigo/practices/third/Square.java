@@ -4,14 +4,26 @@ public class Square extends Rectangle {
         super(base, height, tag);
     }
 
+    /**
+     *
+     * @return figure
+     */
     public String getFigureType() {
         return "Square";
     }
 
+    /**
+     *
+     * @return area
+     */
     public double area() {
         return getBase() * getHeight();
     }
 
+    /**
+     *
+     * @return draw figure
+     */
     public String drawTxt() {
         String draw = "";
         for (int i = 0; i < super.getHeight(); i++) {

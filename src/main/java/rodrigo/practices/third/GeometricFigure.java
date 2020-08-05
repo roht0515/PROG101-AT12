@@ -14,10 +14,28 @@ public abstract class GeometricFigure extends Figure {
         this.tag = tag;
     }
 
+    /**
+     *
+     * @return Type
+     */
     public abstract String getFigureType();
+
+    /**
+     *
+     * @return area
+     */
     public abstract double area();
+
+    /**
+     *
+     * @return drawFigure
+     */
     public abstract String drawTxt();
 
+    /**
+     *
+     * @return print description
+     */
     public final String printDescription() {
         String res = "Tag: "+getTag() + "\n" +
                 "Figure Type: " + getFigureType() +"\n"+

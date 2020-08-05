@@ -2,7 +2,9 @@ package rodrigo.practices.third;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class FiguresTesting {
+
     public static ArrayList<GeometricFigure> geometricFigures;
+
     public static void main(String[] arg) {
         geometricFigures = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
@@ -44,6 +46,10 @@ public class FiguresTesting {
         System.exit(0);
     }
 
+    /**
+     *
+     * @return menu
+     */
     public static void menu() {
         System.out.println("1.- Create rectangle\n" +
                 "2.- Create square\n" +
@@ -51,6 +57,10 @@ public class FiguresTesting {
                 "0.- Exit");
     }
 
+    /**
+     *
+     * @return create rectangle
+     */
     public static Rectangle createRectangle() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("please, enter the base");
@@ -60,6 +70,10 @@ public class FiguresTesting {
         return new Rectangle(base, height, "R-1");
     }
 
+    /**
+     *
+     * @return create square
+     */
     public static Square createSquare() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("please, enter the height");

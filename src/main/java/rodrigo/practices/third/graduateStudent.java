@@ -7,6 +7,10 @@ public class graduateStudent extends AbstracStudent {
         super.name = name;
     }
 
+    /**
+     *
+     * @return final result
+     */
     public String computeCourseGrade(){
         int totalScore = 0;
         for( int i = 0; i < super.test.length; i++) {
