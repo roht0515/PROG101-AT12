@@ -7,17 +7,17 @@ package julia.practices.third.inheritance;
  *
  */
 abstract class Figure {
-    protected final static int WHITE = 0;
-    protected final static int BLACK = 1;
+    protected static final int WHITE = 0;
+    protected static final int BLACK = 1;
 
-    protected int color;
+    private int color;
 
     /** Identifier name of a figure */
-    protected String identifier;
+    private String identifier;
 
     /** Every figure has a color */
-    Figure(int color) {
-        this.color = color;
+    Figure(final int colors) {
+        color = colors;
         identifier = "";
     }
 

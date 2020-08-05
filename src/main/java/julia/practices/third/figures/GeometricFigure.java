@@ -18,9 +18,9 @@ public abstract class GeometricFigure extends Figure {
     public abstract void drawTxt();
 
     public final String printDescription() {
-        String res = "Tag: "+getTag() + "\n" +
-                            "Figure Type: " + getFigureType() +"\n"+
-                            "Area: " + area();
+        String res = "Tag: " + getTag() + "\n"
+                            + "Figure Type: " + getFigureType() + "\n"
+                            + "Area: " + area();
         return  res;
     }
 }

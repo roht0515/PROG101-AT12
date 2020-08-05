@@ -3,18 +3,23 @@ package julia.practices.third.figures;
 import java.util.Scanner;
 
 public class FiguresTesting {
+    public static final int NUMBER_THREE = 3;
+    private String name;
+    public FiguresTesting() {
+        name = "main";
+    }
 
-    public static void main(String[] arg) {
+    public static void main(final String[] arg) {
         GeometricFigure geometricFigure;
         showMenu();
         Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
-        while(number != 0) {
+        while (number != 0) {
             if (number == 1) {
                 geometricFigure = createRectangle();
                 showMenu();
                 int number3 = scanner.nextInt();
-                if (number3 == 3) {
+                if (number3 == NUMBER_THREE) {
                     geometricFigure.drawTxt();
                     System.out.println(geometricFigure.printDescription());
                 }
@@ -23,7 +28,7 @@ public class FiguresTesting {
                 geometricFigure = createSquare();
                 showMenu();
                 int number3 = scanner.nextInt();
-                if (number3 == 3) {
+                if (number3 == NUMBER_THREE) {
                     geometricFigure.drawTxt();
                     System.out.println(geometricFigure.printDescription());
                 }
@@ -51,9 +56,9 @@ public class FiguresTesting {
     }
 
     private static void showMenu() {
-        System.out.println("1.- Create rectangle\n" +
-                "2.- Create square\n" +
-                "3.- Display figure\n" +
-                "0.- Exit");
+        System.out.println("1.- Create rectangle\n"
+                + "2.- Create square\n"
+                + "3.- Display figure\n"
+                + "0.- Exit");
     }
 }

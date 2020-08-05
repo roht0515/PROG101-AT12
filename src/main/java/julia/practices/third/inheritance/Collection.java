@@ -6,13 +6,18 @@ public class Collection {
     private  ArrayList<Figure> figures;
     private static final int CANT_QUEEN = 2;
     private static final int CANT_CASTLE = 4;
+    private static final int SIZE_FIGURE = 6;
 
-    public  Collection(){
+    public  Collection() {
         figures = new ArrayList<>();
     }
 
-    public void addFigure(Figure figure) {
-        if (figures.size() < 6){
+    /*
+     *
+     * @param
+     */
+    public final void addFigure(final Figure figure) {
+        if (figures.size() < SIZE_FIGURE) {
             if (figure instanceof Queen) {
                 if (getCantQueens() < CANT_QUEEN) {
                     figures.add(figure);
@@ -28,8 +33,8 @@ public class Collection {
     private int getCantQueens() {
         int queens = 0;
         for (Figure figure: figures) {
-            if ( figure instanceof Queen) {
-                queens ++;
+            if (figure instanceof Queen) {
+                queens++;
             }
         }
         return queens;
@@ -38,20 +43,24 @@ public class Collection {
     private int getCantCastles() {
         int castle = 0;
         for (Figure figure: figures) {
-            if ( figure instanceof Castle) {
-                castle ++;
+            if (figure instanceof Castle) {
+                castle++;
             }
         }
         return castle;
     }
 
-    public void travelCollection() {
-        for (Figure figure: figures) {
+    /*
+     *
+     * @param
+     */
+    public final void travelCollection() {
+        for (Figure figure : figures) {
             figure.whoAmI();
         }
     }
 
-    public static void main(String [] args) {
+    public static void main(final String[] args) {
         Figure queen = new Queen(1);
         Figure queen2 = new Queen(0);
         Figure castle = new Castle(1);
@@ -67,7 +76,12 @@ public class Collection {
         collection.addFigure(castle4);
         collection.travelCollection();
     }
-    public ArrayList<Figure> getFigures() {
+
+    /*
+     *
+     * @return arraylist
+     */
+    public final ArrayList<Figure> getFigures() {
         return figures;
     }
 }

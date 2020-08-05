@@ -1,14 +1,16 @@
 package julia.practices.third.inheritance;
 
-import inheritance.Figure;
-import inheritance.Position;
-
 /** inheritance.Castle */
 public class Castle extends Figure {
-    public Castle(int color) {
+    public static final int OCHO = 8;
+    public Castle(final int color) {
         super(color);
     }
 
+    /**
+     *
+     * @param
+     */
     public void whoAmI() {
         super.whoAmI();
         System.out.println("inheritance.Castle");
@@ -17,18 +19,18 @@ public class Castle extends Figure {
     /**
      * inheritance.Castle movement We are supposing an empty board
      */
-    public boolean move(Position origin, Position destination) {
+    public boolean move(final Position origin, final Position destination) {
         return
                 // Valid movement
                 ((origin.getRow() == destination.getRow()) || (origin.getColumn() == destination
-                        .getColumn())) &&
+                        .getColumn()))
                         // origin = destination
-                        ((origin.getRow() != destination.getRow()) || (origin.getColumn() != destination
-                                .getColumn())) &&
+                        && ((origin.getRow() != destination.getRow()) || (origin.getColumn() != destination
+                                .getColumn()))
                         // Inside the bounds
-                        ((origin.getRow() >= 1 && origin.getRow() <= 8)
-                                && (origin.getColumn() >= 1 && origin.getColumn() <= 8)
-                                && (destination.getRow() >= 1 && destination.getRow() <= 8) && (destination
-                                .getColumn() >= 1 && destination.getColumn() <= 8));
+                        && ((origin.getRow() >= 1 && origin.getRow() <= OCHO)
+                                && (origin.getColumn() >= 1 && origin.getColumn() <= OCHO)
+                                && (destination.getRow() >= 1 && destination.getRow() <= OCHO) && (destination
+                                .getColumn() >= 1 && destination.getColumn() <= OCHO));
     }
 } // inheritance.Castle
