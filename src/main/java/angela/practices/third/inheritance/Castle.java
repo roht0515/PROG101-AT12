@@ -1,12 +1,16 @@
 package angela.practices.third.inheritance;
 
-
 /** Castle */
 public class Castle extends Figure {
-    public Castle(int color) {
+    private static final int LOW_LIMIT = 1;
+    private static final int UP_LIMIT = 8;
+    public Castle(final int color) {
         super(color);
     }
 
+    /**
+     * print in console who is the object of this class
+     */
     public void whoAmI() {
         super.whoAmI();
         System.out.println("Castle");
@@ -15,18 +19,20 @@ public class Castle extends Figure {
     /**
      * Castle movement We are supposing an empty board
      */
-    public boolean move(Position origin, Position destination) {
+    public boolean move(final Position origin, final Position destination) {
         return
                 // Valid movement
                 ((origin.getRow() == destination.getRow()) || (origin.getColumn() == destination
-                        .getColumn())) &&
+                        .getColumn()))
+                            &&
                         // origin = destination
                         ((origin.getRow() != destination.getRow()) || (origin.getColumn() != destination
-                                .getColumn())) &&
+                                .getColumn()))
+                                    &&
                         // Inside the bounds
-                        ((origin.getRow() >= 1 && origin.getRow() <= 8)
-                                && (origin.getColumn() >= 1 && origin.getColumn() <= 8)
-                                && (destination.getRow() >= 1 && destination.getRow() <= 8) && (destination
-                                .getColumn() >= 1 && destination.getColumn() <= 8));
+                        ((origin.getRow() >= LOW_LIMIT && origin.getRow() <= UP_LIMIT)
+                                && (origin.getColumn() >= LOW_LIMIT && origin.getColumn() <= UP_LIMIT)
+                                && (destination.getRow() >= LOW_LIMIT && destination.getRow() <= UP_LIMIT) && (destination
+                                .getColumn() >= 1 && destination.getColumn() <= UP_LIMIT));
     }
 } // Castle

@@ -7,6 +7,7 @@ public class Product {
     private String unit;
     private boolean promo;
     private int cost;
+    private static final int PERCENT = 100;
 
     public Product(final String name, final int price) {
         this.name = name;
@@ -89,7 +90,7 @@ public class Product {
      *
      * @return int % desc
      */
-    public int getDesc(){
-        return 100-(cost*100/(price*cant));
+    public int getDesc() {
+        return PERCENT - (cost * PERCENT / (price * cant));
     }
 }

@@ -1,24 +1,42 @@
 package angela.practices.third.inheritance;
 
-import java.util.*;
+import java.util.List;
+import java.util.ArrayList;
+
 public class ListFigures {
-    List <Figure> listFigures;
-    public ListFigures(){
-        listFigures = new ArrayList <Figure>();
+    private List<Figure> listFigures;
+
+    public ListFigures() {
+        listFigures = new ArrayList<Figure>();
     }
-    public void addFigure(Figure figure){
+
+    /**
+     *
+     * @param figure
+     */
+    public void addFigure(final Figure figure) {
         listFigures.add(figure);
     }
-    public List<Figure> getList(){
+
+    /**
+     *
+     * @return list with figures
+     */
+    public List<Figure> getList() {
         return listFigures;
     }
-    public void listFigures(){
+
+    /**
+     * call to whoAmI method of a figure
+     */
+    public void listFigures() {
         for (Figure figure: listFigures) {
             figure.whoAmI();
             System.out.println("\n");
         }
     }
-    public static void main(String[] args) {
+
+    public static void main(final String[] args) {
         ListFigures list = new ListFigures();
         Queen queen1 = new Queen(1);
         Queen queen2 = new Queen(2);
