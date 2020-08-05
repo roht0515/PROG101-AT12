@@ -1,4 +1,4 @@
-package laura.practices.third.collection;
+package laura.practices.third.geometricFigures;
 
 /**
  * Defines the general behavior of a figure

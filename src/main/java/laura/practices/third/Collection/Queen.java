@@ -1,4 +1,4 @@
-package laura.practices.third.Collection;
+package laura.practices.third.collection;
 
 /** Queen */
 public class Queen extends Figure {

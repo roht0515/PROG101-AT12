@@ -1,4 +1,4 @@
-package laura.practices.third.Collection;
+package laura.practices.third.collection;
 
 import org.junit.Test;
 import static org.junit.Assert.*;

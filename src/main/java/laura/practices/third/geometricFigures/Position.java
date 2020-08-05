@@ -1,4 +1,4 @@
-package laura.practices.third.collection;
+package laura.practices.third.geometricFigures;
 
 /** Position -row and column- of an object */
 class Position {
