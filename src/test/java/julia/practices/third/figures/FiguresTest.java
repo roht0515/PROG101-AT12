@@ -4,13 +4,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class FiguresTest {
-    @Test
-    public void testgetAreaRectangle() {
-        GeometricFigure geometricFigure = new Rectangle(3, 6,"R-1");
-        double expected = 18.0;
-        double actual = geometricFigure.area();
-        assertEquals(expected, actual);
-    }
+    
     @Test
     public void testGetTagRectangle() {
         GeometricFigure figure = new Rectangle(3,3,"R-1");
@@ -48,4 +42,3 @@ public class FiguresTest {
     }
 
 }
-
