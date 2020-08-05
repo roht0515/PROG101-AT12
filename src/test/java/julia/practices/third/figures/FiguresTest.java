@@ -4,7 +4,22 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class FiguresTest {
-    
+    @Test
+    public void testgetFigureTypeRectangleSinceFigure() {
+        Figure figure = new Rectangle(3, 6,"R-1");
+        String expected = "Rectangle";
+        String actual = figure.getFigureType();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testgetAreaRectangle() {
+        GeometricFigure geometricFigure = new Rectangle(3, 6,"R-1");
+        double expected = 18.0;
+        double actual = geometricFigure.area();
+        assertEquals(expected, actual, 0.01);
+    }
+
     @Test
     public void testGetTagRectangle() {
         GeometricFigure figure = new Rectangle(3,3,"R-1");
@@ -15,7 +30,7 @@ public class FiguresTest {
 
     @Test
     public void testGetTypeFigure() {
-        GeometricFigure square = new Square(3,3,"C-4");
+        GeometricFigure square = new Square(3,"C-4");
         String expected = "Square";
         String actual = square.getFigureType();
         assertEquals(expected, actual);
@@ -33,7 +48,7 @@ public class FiguresTest {
 
     @Test
     public void testPrintDescriptionForSquareSinceGeometricFigureVariable() {
-        GeometricFigure square = new Square(4,4,"C-1");
+        GeometricFigure square = new Square(4,"C-1");
         String expected = "Tag: C-1"+"\n" +
                           "Figure Type: Square" +"\n"+
                           "Area: 16.0";
@@ -42,3 +57,4 @@ public class FiguresTest {
     }
 
 }
+

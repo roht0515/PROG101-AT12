@@ -1,8 +1,7 @@
 package julia.practices.third.figures;
-
 public class Rectangle extends GeometricFigure {
     private int base;
-    private  int height;
+    private int height;
 
     public Rectangle(final int base, final int height, final String tag) {
         super(tag);
@@ -10,36 +9,10 @@ public class Rectangle extends GeometricFigure {
         this.height = height;
     }
 
-    /**
-     *
-     * @return int base
-    */
-    public int getBase() {
-        return base;
-    }
-    /**
-     *
-     * @param
-    */
-
-    public void setBase(final int base) {
-        this.base = base;
-    }
-
-    /**
-     *
-     * @return int height
-    */
-    public int getHeight() {
-        return height;
-    }
-
-    /**
-     *
-     * @parame
-    */
-    public void setHeight(final int height) {
-        this.height = height;
+    public Rectangle(final int side, final String tag) {
+        super(tag);
+        this.base = side;
+        this.height = side;
     }
 
     /**
@@ -55,16 +28,18 @@ public class Rectangle extends GeometricFigure {
      * @return double area
     */
     public double area() {
-        return getBase() * getHeight();
+        return base * height;
     }
 
     /**
      * @param
     */
     public void drawTxt() {
-        System.out.println("******\n"
-        + "******\n"
-        + "******");
-
+        for (int h = 0; h < height; h++) {
+            for (int b = 0; b < base; b++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 }
