@@ -33,7 +33,7 @@ public class Student {
      * @return int getTestScore
      */
     public int getTestScore(final int testNumber) {
-        return test[testNumber - 1];
+        return test[testNumber];
     }
     /**
      *
