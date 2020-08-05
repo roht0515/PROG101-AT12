@@ -1,9 +1,9 @@
-package laura.practices.third;
+package laura.practices.third.Collection;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class ChessTest {
+public class CollectionTest {
 
     @Test
     public void testMoveQueen(){
@@ -13,5 +13,14 @@ public class ChessTest {
         boolean expected = true;
         boolean actual = queen.move(origin, destination);
         assertEquals (expected, actual);
+    }
+
+    @Test
+    public void testAddFiguresToCollection(){
+        Collection collection = new Collection();
+        collection.addFigure();
+        for (Figure figure: collection.figureArray) {
+            figure.whoAmI();
+        }
     }
 }

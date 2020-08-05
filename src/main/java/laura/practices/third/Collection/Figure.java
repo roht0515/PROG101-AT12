@@ -1,14 +1,14 @@
-package laura.practices.third;
+package laura.practices.third.Collection;
 
 /**
  * Defines the general behavior of a figure
- * 
+ *
  * @author JRM
- * 
+ *
  */
 abstract class Figure {
-  protected final static int WHITE = 0;
-  protected final static int BLACK = 1;
+  protected static final int WHITE = 0;
+  protected static final int BLACK = 1;
 
   protected int color;
 
@@ -16,7 +16,7 @@ abstract class Figure {
   protected String identifier;
 
   /** Every figure has a color */
-  Figure(int color) {
+  Figure(final int color) {
     this.color = color;
     identifier = "";
   }
@@ -37,5 +37,4 @@ abstract class Figure {
       System.out.println("BLACK");
     }
   }
-
-} // Figure
+}

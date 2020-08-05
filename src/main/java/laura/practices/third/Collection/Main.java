@@ -2,7 +2,7 @@ package laura.practices.third.Collection;
 
 public class Main {
     
-    public static void main(String args[]) {
+    public static void main(final String args[]) {
         Collection collection = new Collection();
         collection.addFigure();
     }
