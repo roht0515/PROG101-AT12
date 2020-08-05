@@ -1,3 +1,5 @@
+package laura.practices.third;
+
 /** Position -row and column- of an object */
 class Position {
   private int row, column;

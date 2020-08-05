@@ -1,29 +1,9 @@
 package laura.practices.third;
 
 import org.junit.Test;
-
-import jdk.jfr.Timestamp;
-
 import static org.junit.Assert.*;
-  
-public class ChessTest {
-    @Test
-    public void testWhoAmICastle() {
-        Castle castle = new Castle(0);
-        String expected = "Castle";
-        String actual = castle.whoAmI();
-        System.out.println(actual);
-        assertEquals(expected, actual);
-    }
 
-    @Test
-    public void testWhoAmIQueen() {
-        Queen queen = new Queen(0);
-        String expected = "Queen";
-        String actual = queen.whoAmI();
-        System.out.println(actual);
-        assertEquals(expected, actual);
-    }
+public class ChessTest {
 
     @Test
     public void testMoveQueen(){
@@ -32,6 +12,6 @@ public class ChessTest {
         Queen queen = new Queen(0);
         boolean expected = true;
         boolean actual = queen.move(origin, destination);
-        assertEquals (expected, true);
+        assertEquals (expected, actual);
     }
 }

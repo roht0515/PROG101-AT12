@@ -1,3 +1,5 @@
+package laura.practices.third;
+
 /**
  * Defines the general behavior of a figure
  * 

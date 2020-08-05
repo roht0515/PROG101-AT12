@@ -4,6 +4,12 @@ public class Product {
     private String name;
     private int price;
     private int quantity;
+    public static final int QUANTITY_PRODUCT = 10;
+    public static final int QUANTITY_MILK = 5;
+    public static final int QUANTITY_RICE = 20;
+    public static final int COST_BREAD = 9;
+    public static final int COST_MILK = 45;
+    public static final int COST = 90;
 
     public Product(final String name, final int price, final int quantity) {
         this.name = name;
@@ -34,32 +40,30 @@ public class Product {
      */
     public int getTotalPerProduct() {
         int total = 0;
-        total = quantity*price;
-        if (isPromo(this.name)){
+        total = quantity * price;
+        if (isPromo(this.name)) {
             switch (this.name) {
                 case "bread":
-                    if(quantity == 10){
-                        total = 9;
+                    if (quantity == QUANTITY_PRODUCT) {
+                        total = COST_BREAD;
                     }
                     break;
                 case "milk":
-                    if(quantity == 5){
-                        total = 45;
+                    if (quantity == QUANTITY_MILK) {
+                        total = COST_MILK;
                     }
                     break;
                 case "oil":
-                    if(quantity == 10){
-                        total = 90;
+                    if (quantity == QUANTITY_PRODUCT) {
+                        total = COST;
                     }
                     break;
                 case "rice":
-                    if(quantity == 20){
-                        total = 90;
+                    if (quantity == QUANTITY_RICE) {
+                        total = COST;
                     }
                     break;
-            
                 default:
-                    
                     break;
             }
         }
@@ -67,11 +71,11 @@ public class Product {
     }
 
     /**
-     * @return 
+     * @return string getUnit
      */
-    public String getUnit(){
+    public String getUnit() {
         String unit = "";
-        switch (getName()){
+        switch (getName()) {
             case "bread":
                 unit = "u";
             break;
@@ -91,8 +95,8 @@ public class Product {
     /**
      * @return boolean isPromo
      */
-    public boolean isPromo(String nameProduct){
-        return (nameProduct == "bread" || nameProduct == "milk" || 
-                nameProduct == "oil" || nameProduct == "rice");
+    public boolean isPromo(final String nameProduct) {
+        return (nameProduct == "bread" || nameProduct == "milk"
+        || nameProduct == "oil" || nameProduct == "rice");
     }
 }

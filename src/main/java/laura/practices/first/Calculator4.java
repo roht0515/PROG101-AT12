@@ -19,7 +19,7 @@ public class Calculator4 {
         }
         return result;
     }
-    public boolean isNegativeNumber(int number) throws NumberFormatException{
+    public static boolean isNegativeNumber(int number) throws NumberFormatException{
         if (number< 0){
             return true;
         } else {

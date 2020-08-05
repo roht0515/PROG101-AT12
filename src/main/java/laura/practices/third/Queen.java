@@ -1,3 +1,5 @@
+package laura.practices.third;
+
 /** Queen */
 public class Queen extends Figure {
   public Queen(int color) {
