@@ -1,6 +1,6 @@
+package rodrigo.practices.first;
 import org.junit.Test;
 import static org.junit.Assert.*;
-
 public class Calculator4Test {
     @Test
     public void testSomeNumbers(){
