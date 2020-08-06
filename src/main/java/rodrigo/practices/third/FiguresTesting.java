@@ -2,9 +2,8 @@ package rodrigo.practices.third;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class FiguresTesting {
-
     public static ArrayList<GeometricFigure> geometricFigures;
-
+    public FiguresTesting() { }
     public static void main(String[] arg) {
         geometricFigures = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
@@ -12,7 +11,7 @@ public class FiguresTesting {
         do {
             menu();
             int number = scanner.nextInt();
-            switch (number)
+            switch(number)
             {
                 case 1: {
                     geometricFigures.add(createRectangle());
@@ -23,12 +22,12 @@ public class FiguresTesting {
                 case 3: {
                     int size = geometricFigures.size();
                     int cont = 0;
-                    if(size == 0) {
+                    if (size == 0) {
                         System.out.println("No hay figuras por mostrar");
                     } else {
-                        for(GeometricFigure figure :geometricFigures) {
+                        for (GeometricFigure figure :geometricFigures) {
                             cont++;
-                            if(cont == size) {
+                            if (cont == size) {
                                 System.out.println(figure.printDescription());
                                 System.out.println(figure.drawTxt());
                             }
@@ -42,14 +41,10 @@ public class FiguresTesting {
                     System.out.println("Error, opcion incorrecta, intente nuevamente");
                 } break;
             }
-        }while (flag);
+        } while (flag);
         System.exit(0);
     }
 
-    /**
-     *
-     * @return menu
-     */
     public static void menu() {
         System.out.println("1.- Create rectangle\n" +
                 "2.- Create square\n" +
@@ -57,10 +52,6 @@ public class FiguresTesting {
                 "0.- Exit");
     }
 
-    /**
-     *
-     * @return create rectangle
-     */
     public static Rectangle createRectangle() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("please, enter the base");
@@ -70,10 +61,6 @@ public class FiguresTesting {
         return new Rectangle(base, height, "R-1");
     }
 
-    /**
-     *
-     * @return create square
-     */
     public static Square createSquare() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("please, enter the height");

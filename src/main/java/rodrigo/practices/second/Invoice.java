@@ -33,12 +33,12 @@ public class Invoice {
 
     public String getDetailWithQuantity() {
         String detail = "";
-        String headers ="Cant   Product    Price    Total\n";
+        String headers = "Cant   Product    Price    Total\n";
         String line = "--------------------------------\n";
         detail += headers;
         detail += line;
         for (Product product: products) {
-            detail += product.getQuantity() +" -\t\t" + product.getName() + "\t-\t$" + product.getPrice()+ "\t\t$"+ product.getTotal() + "\n";
+            detail += product.getQuantity() + " -\t\t" + product.getName() + "\t-\t$" + product.getPrice() + "\t\t$" + product.getTotal() + "\n";
         }
         detail += line;
         detail += "TOTAL\t\t\t\t\t\t$" + getTotalCost();
@@ -47,12 +47,12 @@ public class Invoice {
 
     public String getDetailWithQuantityAndType() {
         String detail = "";
-        String headers ="Cant       Product    Price    Total\n";
+        String headers = "Cant       Product    Price    Total\n";
         String line = "-------------------------------------\n";
         detail += headers;
         detail += line;
         for (Product product: products) {
-            detail += product.getQuantity() +""+product.getType()+" -\t\t" + product.getName() + " \t-\t$" + product.getPrice()+ "\t\t$"+ product.getTotal() + "\n";
+            detail += product.getQuantity() + "" + product.getType() + " -\t\t" + product.getName() + " \t-\t$" + product.getPrice() + "\t\t$" + product.getTotal() + "\n";
         }
         detail += line;
         detail += "TOTAL\t\t\t\t\t\t\t$" + getTotalCost();
@@ -61,12 +61,12 @@ public class Invoice {
 
     public String getDetailWithQuantityAndTypeAndDiscount() {
         String detail = "";
-        String headers ="Cant       Product    Price    Discount    Total\n";
+        String headers = "Cant       Product    Price    Discount    Total\n";
         String line = "------------------------------------------------\n";
         detail += headers;
         detail += line;
         for (Product product: products) {
-            detail += product.getQuantity() +""+product.getType()+" -\t\t" + product.getName() + " \t-\t$" + product.getPrice()+"\t\t$" + product.getDiscount() + "\t\t\t$"+ product.getTotal() + "\n";
+            detail += product.getQuantity() + "" + product.getType() + " -\t\t" + product.getName() + " \t-\t$" + product.getPrice() + "\t\t$" + product.getDiscount() + "\t\t\t$" + product.getTotal() + "\n";
         }
         detail += line;
         detail += "TOTAL\t\t\t\t\t\t\t\t\t\t$" + getTotalCost();

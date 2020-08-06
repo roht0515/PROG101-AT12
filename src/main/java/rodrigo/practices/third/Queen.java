@@ -4,10 +4,6 @@ public class Queen extends Figure {
         super(color);
     }
 
-    /**
-     *
-     * @return who is
-     */
     public String whoAmI() {
         String type = super.whoAmI();
         return type + " " + "Queen";

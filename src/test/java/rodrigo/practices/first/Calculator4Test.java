@@ -3,13 +3,14 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 public class Calculator4Test {
     @Test
-    public void testSomeNumbers(){
+    public void testSomeNumbers() {
         int actual = Calculator4.add("1,2");
         int expected = 3;
         assertEquals(expected,actual);
     }
+
     @Test
-    public void testEmptyString(){
+    public void testEmptyString() {
         int actual = Calculator4.add("");
         int expected = 0;
         assertEquals(expected,actual);
@@ -36,33 +37,33 @@ public class Calculator4Test {
     }
 
     @Test
-    public void testOneEmptySpaceAndOneNegativeNumberString(){
+    public void testOneEmptySpaceAndOneNegativeNumberString() {
         int actual = Calculator4.add(" ,-1");
         int expected = -1;
         assertEquals(expected,actual);
     }
 
     @Test
-    public void testOneEmptySpaceAndOnePositiveNumberString(){
+    public void testOneEmptySpaceAndOnePositiveNumberString() {
         int actual = Calculator4.add(" ,1");
         int expected = 1;
         assertEquals(expected,actual);
     }
     @Test
-    public void testTwoEmptySpaceAndOnePositiveNumberString(){
+    public void testTwoEmptySpaceAndOnePositiveNumberString() {
         int actual = Calculator4.add(" , ,1");
         int expected = 1;
         assertEquals(expected,actual);
     }
     @Test
-    public void testTwoNegativeNumbersAndOnePositiveNumberString(){
+    public void testTwoNegativeNumbersAndOnePositiveNumberString() {
         int actual = Calculator4.add("-2,-5,1");
         int expected = -6;
         assertEquals(expected,actual);
     }
 
     @Test
-    public void testOneCharacterAndOnePositiveNumberString(){
+    public void testOneCharacterAndOnePositiveNumberString() {
         String actual;
         String expected = "Error, ingreso un valor invalido";
         try {
@@ -74,7 +75,7 @@ public class Calculator4Test {
     }
 
     @Test
-    public void testOneCharacterAndOneNegativeNumberString(){
+    public void testOneCharacterAndOneNegativeNumberString() {
         String actual;
         String expected = "Error, ingreso un valor invalido";
         try {
@@ -86,7 +87,7 @@ public class Calculator4Test {
     }
 
     @Test
-    public void testTwoCharactersString(){
+    public void testTwoCharactersString() {
         String actual;
         String expected = "Error, ingreso un valor invalido";
         try {
@@ -98,7 +99,7 @@ public class Calculator4Test {
     }
 
     @Test
-    public void testNumbersAndCharactersString(){
+    public void testNumbersAndCharactersString() {
         String actual;
         String expected = "Error, ingreso un valor invalido";
         try {
@@ -110,14 +111,14 @@ public class Calculator4Test {
     }
 
     @Test
-    public void testNumbersOfTwoDigitsString(){
+    public void testNumbersOfTwoDigitsString() {
         int actual = Calculator4.add("21,11,15");
         int expected = 47;
         assertEquals(expected,actual);
     }
 
     @Test
-    public void testOneBigNumberAndSmallNumber(){
+    public void testOneBigNumberAndSmallNumber() {
         int actual = Calculator4.add("2,1001");
         int expected = 2;
         assertEquals(expected,actual);

@@ -1,13 +1,9 @@
 package rodrigo.practices.third;
 public class Castle extends Figure {
-    public Castle(int color) {
+    public Castle(final int color) {
         super(color);
     }
 
-    /**
-     *
-     * @return who is
-     */
     public String whoAmI() {
         String type = super.whoAmI();
         return type + " " + "Castle";

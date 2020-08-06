@@ -1,69 +1,45 @@
 package rodrigo.practices.third;
 public abstract  class AbstracStudent {
-    public int NUM_OF_STUDENTS;
+    private final int NUM_OF_STUDENTS = 3;
     protected String name;
     protected int [] test;
     protected String courseGrade;
 
     /** Every figure has a color */
     AbstracStudent() {
-        test =  new int[3];
+        test = new int[3];
     }
     AbstracStudent(String name) {
         this.name =  name;
-        test =  new int[3];
+        test =  new int[NUM_OF_STUDENTS];
     }
 
-    /**
-     *
-     * @return Grade
-     */
-    public String getCourseGrade () {
+    public String getCourseGrade() {
         return this.courseGrade;
     }
 
-    /**
-     *
-     * @return Name
-     */
-    public String getName () {
+    public String getName() {
         return this.name;
     }
 
-    /**
-     *
-     * @return TotalScore
-     */
-    public int getTestScore () {
+    public int getTestScore() {
         int score = 0;
-        for (int i = 0 ;  i < this.test.length; i++) {
+        for (int i = 0;  i < this.test.length; i++) {
             score += this.test[i];
         }
         return score;
     }
 
-    /**
-     *
-     * set Name
-     */
-    public void setName (String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
-    /**
-     *
-     * Set Scores
-     */
-    public void setTestScore (int [] tests) {
-        for (int i = 0 ;  i < this.test.length; i++) {
+    public void setTestScore(final int[] tests) {
+        for (int i = 0; i < this.test.length; i++) {
             this.test[i] = tests[i];
         }
 
     }
-    /**
-     *
-     * Show final result
-     */
     public abstract String computeCourseGrade();
 
 }

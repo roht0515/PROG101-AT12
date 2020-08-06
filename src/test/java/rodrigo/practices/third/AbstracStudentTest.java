@@ -5,7 +5,7 @@ public class AbstracStudentTest {
 
     @Test
     public void testCollegeStudentApprove(){
-        AbstracStudent student = new collegeStudent("juan");
+        AbstracStudent student = new CollegeStudent("juan");
         int [] scores =  {60,52,53};
         student.setTestScore(scores);
         String  actual = student.computeCourseGrade();
@@ -15,7 +15,7 @@ public class AbstracStudentTest {
 
     @Test
     public void testCollegeStudentReprove(){
-        AbstracStudent student = new collegeStudent("juan");
+        AbstracStudent student = new CollegeStudent("juan");
         int [] scores =  {44,32,53};
         student.setTestScore(scores);
         String  actual = student.computeCourseGrade();
@@ -25,7 +25,7 @@ public class AbstracStudentTest {
 
     @Test
     public void testGraduateStudentApprove(){
-        AbstracStudent student = new graduateStudent("juan");
+        AbstracStudent student = new GraduateStudent("juan");
         int [] scores =  {73,74,72};
         student.setTestScore(scores);
         String  actual = student.computeCourseGrade();
@@ -35,7 +35,7 @@ public class AbstracStudentTest {
 
     @Test
     public void testGraduateStudentReprove(){
-        AbstracStudent student = new graduateStudent("juan");
+        AbstracStudent student = new GraduateStudent("juan");
         int [] scores =  {68,72,66};
         student.setTestScore(scores);
         String  actual = student.computeCourseGrade();

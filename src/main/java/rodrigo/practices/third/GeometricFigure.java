@@ -1,9 +1,9 @@
 package rodrigo.practices.third;
-public abstract class GeometricFigure extends Figure {
+public abstract class GeometricFigure extends AbstractFigure {
     private String tag;
     public  GeometricFigure(final String tag) {
-        super(1);
-        this.tag = tag;
+        super.setTag(tag);
+        this.tag = super.getTag();
     }
 
     public final String getTag() {
@@ -14,32 +14,20 @@ public abstract class GeometricFigure extends Figure {
         this.tag = tag;
     }
 
-    /**
-     *
-     * @return Type
-     */
-    public abstract String getFigureType();
+    public String getFigureType() {
+        return "";
+    }
+    public double area() {
+        return 0.0;
+    }
+    public String drawTxt() {
+        return "";
+    }
 
-    /**
-     *
-     * @return area
-     */
-    public abstract double area();
-
-    /**
-     *
-     * @return drawFigure
-     */
-    public abstract String drawTxt();
-
-    /**
-     *
-     * @return print description
-     */
     public final String printDescription() {
-        String res = "Tag: "+getTag() + "\n" +
-                "Figure Type: " + getFigureType() +"\n"+
+        String res = "Tag: " + getTag() + "\n" +
+                "Figure Type: " + getFigureType() + "\n" +
                 "Area: " + area();
-        return  res;
+        return res;
     }
 }

@@ -1,23 +1,20 @@
 package rodrigo.practices.third;
-public class graduateStudent extends AbstracStudent {
+public class GraduateStudent extends AbstracStudent {
+    private final int CANT_OF_STUDENTS = 3;
+    private final int APPROVAL_SCORE = 71;
+    GraduateStudent() { }
 
-    graduateStudent () { }
-
-    graduateStudent (String name) {
+    GraduateStudent(String name) {
         super.name = name;
     }
 
-    /**
-     *
-     * @return final result
-     */
-    public String computeCourseGrade(){
+    public String computeCourseGrade() {
         int totalScore = 0;
-        for( int i = 0; i < super.test.length; i++) {
-            totalScore+= super.test[i];
+        for (int i = 0; i < super.test.length; i++) {
+            totalScore += super.test[i];
         }
-        totalScore /= 3;
-        if(totalScore >= 71) {
+        totalScore /= CANT_OF_STUDENTS;
+        if (totalScore >= APPROVAL_SCORE) {
             super.courseGrade = "Aprobado";
             return "Aprobado";
         }
