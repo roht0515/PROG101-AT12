@@ -1,4 +1,4 @@
-package practices.second;
+package jhordan.Practices.Second;
 
 
 public class Product {

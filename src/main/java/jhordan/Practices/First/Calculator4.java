@@ -1,8 +1,10 @@
+package jhordan.Practices.First;
 
-public class Calculator4 {
-
-
-
+final class  Calculator4 {
+    static final int THOUSAND = 1000;
+    static final int THREE = 3;
+    static final int FOUR = 4;
+    private Calculator4() { }
     public static String getDelimiter(final String numbers) {
         String result = "[";
         for (int count = 0; count < numbers.length(); count++) {
@@ -16,50 +18,48 @@ public class Calculator4 {
         return result;
     }
 
-    public static boolean isPositive(int num)  {
+    public static boolean isPositive(final int num)  {
         boolean result = false;
         if (num >= 0) {
-          return result = true;
+          result = true;
         }
         return result;
     }
 
-    public static boolean isBiggerThanOneThousand(int num)  {
+    public static boolean isBiggerThanOneThousand(final int num)  {
         boolean result = false;
-        if (num >= 1000) {
-            return result = true;
+        if (num >= THOUSAND) {
+            result = true;
         }
         return result;
     }
 
-    public static boolean isNumber(String text) {
+    public static boolean isNumber(final String text) {
         try {
             Integer.parseInt(text);
             return true;
-        }
-        catch (NumberFormatException e) {
+        } catch (NumberFormatException e) {
             return  false;
         }
     }
-    
-    public static int add(String numbers)throws  Exception{
+    public static int add(final String numbers)throws  Exception {
         int result = 0;
         if (numbers.isEmpty()) {
             return result;
         } else {
             String[] numbersArray;
-            String Sign = "";
+            String sign = "";
             if (numbers.matches("[//]+.*") || numbers.matches("//.*" + "\n.*")) {
                 if (numbers.matches("//" + ".*" + "\n.*")) {
-                    Sign = numbers.substring(2, 3);
-                    String numbersNew = numbers.substring(4);
-                    numbersArray = numbersNew.split(Sign);
+                    sign = numbers.substring(2, THREE);
+                    String numbersNew = numbers.substring(FOUR);
+                    numbersArray = numbersNew.split(sign);
                 } else {
-                    Sign = getDelimiter(numbers);
+                    sign = getDelimiter(numbers);
                     String numbersNew;
                     numbersNew = numbers.substring(numbers.indexOf("n") + 1);
-                    Sign.trim();
-                    numbersArray = numbersNew.split(Sign);
+                    sign.trim();
+                    numbersArray = numbersNew.split(sign);
                 }
             } else {
                 numbersArray = numbers.split("[\\\n,]");

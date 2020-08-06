@@ -1,3 +1,5 @@
+package jhordan.Practices.First;
+
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 

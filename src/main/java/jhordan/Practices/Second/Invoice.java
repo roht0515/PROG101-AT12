@@ -1,4 +1,4 @@
-package practices.second;
+package jhordan.Practices.Second;
 
 import java.util.ArrayList;
 import java.util.List;
