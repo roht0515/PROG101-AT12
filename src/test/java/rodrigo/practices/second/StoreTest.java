@@ -1,5 +1,5 @@
+package rodrigo.practices.second;
 import org.junit.Test;
-
 import static org.junit.Assert.*;
 
 public class StoreTest {

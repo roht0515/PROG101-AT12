@@ -1,3 +1,4 @@
+package rodrigo.practices.second;
 import java.util.ArrayList;
 import java.util.List;
 public class Store {
