@@ -10,7 +10,7 @@ public class Main {
     static final int NUMBER_TWO = 2;
     static final int NUMBER_THREE = 3;
     private String name;
-    
+
     public Main() throws IOException {
         name = "";
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));

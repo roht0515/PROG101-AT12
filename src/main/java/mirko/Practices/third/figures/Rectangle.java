@@ -18,7 +18,7 @@ public class Rectangle extends GeometricFigure {
         this.height = height;
         super.setArea(this.base * this.height);
     }
-    
+
     /**
     @set base;
     **/
