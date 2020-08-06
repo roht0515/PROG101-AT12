@@ -3,38 +3,34 @@ package laura.practices.third.geometricFigures;
 /**
  * Defines the general behavior of a figure
  *
- * @author JRM
- *
  */
 abstract class Figure {
-  protected static final int WHITE = 0;
-  protected static final int BLACK = 1;
 
-  protected int color;
+  protected String tag = "";
+  protected String label = "";
+  protected double area;
 
-  /** Identifier name of a figure */
-  protected String identifier;
-
-  /** Every figure has a color */
-  Figure(final int color) {
-    this.color = color;
-    identifier = "";
+  /**
+   * @return String tag
+   */
+  public String getTag() {
+    return tag;
   }
 
-  /** Get the figure color */
-  public int getColor() {
-    return this.color;
+  /**
+   * @return String label
+   */
+  public String getFigureType() {
+    return label;
+  }
+  
+  public double area() {
+    return area;
   }
 
-  /** General figures behavior */
-  public abstract boolean move(Position origin, Position destination);
+  public void drawTxt() {      
+  }
 
-  /** For testing purposes */
-  public void whoAmI() {
-    if (color == Figure.WHITE) {
-      System.out.println("WHITE");
-    } else {
-      System.out.println("BLACK");
-    }
+  public void printDescription() {      
   }
 }
