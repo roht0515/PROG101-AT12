@@ -2,6 +2,7 @@ package rodrigo.practices.third;
 public class CollegeStudent extends AbstracStudent {
     private final int CANT_OF_STUDENTS = 3;
     private final int APPROVAL_SCORE = 51;
+
     CollegeStudent() { }
     CollegeStudent(final String name) {
     super.name = name;
