@@ -1,62 +1,71 @@
 package elizabeth.practices.third.exercise2;
 
-import elizabeth.practices.third.exercise1.Figure;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-public class Rectangle extends GeometricFigure{
+public class Rectangle extends GeometricFigure {
     private int height;
     private int width;
+    private String figureType;
 
-    public Rectangle(String description, int height, int width) {
+    public Rectangle(final String description, final String figureType, final int height, final int width) {
         super(description);
         this.height = height;
         this.width = width;
-    }
-    public Rectangle(String description) {
-        super(description);
+        this.figureType = figureType;
     }
 
+    /**
+     *@return int getHeight
+     */
     public int getHeight() {
         return height;
     }
 
+    /**
+     *@return int getHeight
+     */
     public int getWidth() {
         return width;
     }
 
-    public void setHeight(int height) {
+    /**
+     *@Method void setHeight
+     */
+    public void setHeight(final int height) {
         this.height = height;
     }
 
-    public void setWidth(int width) {
+    /**
+     *@Method void setWidth
+     */
+    public void setWidth(final int width) {
         this.width = width;
     }
 
-    @Override
-    public String getTag() {
-        return tag + " - " +height+", "+width;
-    }
-
-    @Override
-    public String getFigureType() {
-        return description;
-    }
-
+    /**
+     *@return double area
+     */
     @Override
     public double area() {
         return (height * width);
     }
 
+    /**
+     * @Method void drawTxt
+     */
     @Override
     public void drawTxt() {
-        for (int i = 1; i <= height ; i++) {
-            for (int j = 1; j <= width ; j++) {
+        for (int i = 1; i <= height; i++) {
+            for (int j = 1; j <= width; j++) {
                 System.out.print("* ");
             }
             System.out.print("\n");
         }
+    }
+
+    /**
+     * @return String getFigureType
+     */
+    @Override
+    public String getFigureType() {
+        return figureType;
     }
 }

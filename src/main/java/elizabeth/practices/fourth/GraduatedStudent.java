@@ -9,13 +9,13 @@ public class GraduatedStudent extends Student {
 
     /**
      *
-     * @return String data
+     * @return String computeCourseGrade
      */
     public String computeCourseGrade() {
         if (getTestScore() >= MINIMUM_SCORE) {
-            return "Approved";
+            return "Passed";
         } else {
-            return "Didn't approve";
+            return "Failed";
         }
     }
 }

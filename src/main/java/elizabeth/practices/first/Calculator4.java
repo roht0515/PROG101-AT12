@@ -1,13 +1,16 @@
 package elizabeth.practices.first;
 
-import java.util.ArrayList;
+public final class Calculator4 {
+    private static  final int LIMIT = 1000;
 
-public class Calculator4 {
-    public static int add(String numbers) throws Exception {
+    private Calculator4() {
+    }
+
+    public static int add(final String numbers) throws Exception {
         int result = 0;
         String[] numbersArray = {""};
-        String delimiter = newDelimiter(numbers);
-        String subCadena = numbers.substring(numbers.indexOf("\n")+1);
+        final String delimiter = newDelimiter(numbers);
+        final String subCadena = numbers.substring(numbers.indexOf("\n") + 1);
         String message = "Negatives not allowed: ";
         boolean isNegative = false;
 
@@ -16,56 +19,55 @@ public class Calculator4 {
         } else {
             if (numbers.startsWith("//")) {
                 numbersArray = subCadena.split(delimiter);
-            }else {
+            } else {
                 numbersArray = numbers.split("\n|,");
             }
-            for(int i = 0; i < numbersArray.length; i++){
-                if (isNumeric(numbersArray[i]) && isPositive(numbersArray[i]) && Integer.parseInt(numbersArray[i] ) < 1000) {
+            for (int i = 0; i < numbersArray.length; i++) {
+                if (isNumeric(numbersArray[i]) && isPositive(numbersArray[i])
+                        && Integer.parseInt(numbersArray[i]) < LIMIT) {
                     result = result + Integer.parseInt(numbersArray[i]);
-                }else{
+                } else {
                     if (isNumeric(numbersArray[i]) && !isPositive(numbersArray[i])) {
                         isNegative = true;
-                        message += numbersArray[i]+",";
+                        message += numbersArray[i] + ",";
                     }
                 }
             }
         }
         if (isNegative) {
             throw new ArithmeticException(message);
-        }else {
+        } else {
             return result;
         }
     }
 
-    public static boolean isNumeric(String number) {
+    public static boolean isNumeric(final String number) {
         try {
             Integer.parseInt(number);
             return true;
-        } catch (NumberFormatException e){
+        } catch (final NumberFormatException e) {
             return false;
         }
     }
 
-    public static String newDelimiter(String cad) {
+    public static String newDelimiter(final String cad) {
         String delimeter = "";
         String newCad = "";
 
-        int pos = cad.indexOf("\n");
-        if(cad.startsWith("//") ) {
-            newCad = cad.substring(2,pos);
+        final int pos = cad.indexOf("\n");
+        if (cad.startsWith("//")) {
+            newCad = cad.substring(2, pos);
             delimeter = valueOfBrackets(newCad);
         }
         return delimeter;
     }
 
-    public static String extraer(String subcad) {
-        String ini = "[";
-        String end = "]";
+    public static String extraer(final String subcad) {
+        final String ini = "[";
         String result = "";
-        String aux = "";
 
-        if (subcad.startsWith(ini) && subcad.endsWith("]")){
-            for (int i = 1; i < subcad.length()-1; i++) {
+        if (subcad.startsWith(ini) && subcad.endsWith("]")) {
+            for (int i = 1; i < subcad.length() - 1; i++) {
                 result += String.valueOf(subcad.charAt(i));
             }
         } else {
@@ -75,29 +77,30 @@ public class Calculator4 {
         }
         return result;
     }
-    public static String valueOfBrackets(String cad) {
+
+    public static String valueOfBrackets(final String cad) {
         String result = "";
         String aux = " ";
 
-        int tam = cad.length();
+        final int tam = cad.length();
         if (cad.startsWith("[")) {
             for (int i = 0; i <= tam; i++) {
-                int ini = cad.indexOf("[", i);
-                int end = cad.indexOf("]", i);
+                final int ini = cad.indexOf("[", i);
+                final int end = cad.indexOf("]", i);
                 if (ini != -1 && end != -1) {
                     aux = cad.substring(ini, end) + "]";
-                    result += "|" + "\\"+extraer(aux);
+                    result += "|" + "\\" + extraer(aux);
                     i = end;
                 }
             }
             return result.substring(1);
         } else {
-            return "\\"+cad;
+            return "\\" + cad;
         }
     }
 
-    public static boolean isPositive(String num) {
-        return (Integer.parseInt(num) >=0 );
+    public static boolean isPositive(final String num) {
+        return (Integer.parseInt(num) >= 0);
     }
 }
 

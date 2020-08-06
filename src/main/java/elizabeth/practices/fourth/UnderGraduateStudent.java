@@ -1,6 +1,6 @@
 package elizabeth.practices.fourth;
 
-public class UnderGraduateStudent extends Student{
+public class UnderGraduateStudent extends Student {
     private static final int MINIMUM_SCORE = 51;
 
     public UnderGraduateStudent(final String name) {
@@ -9,13 +9,13 @@ public class UnderGraduateStudent extends Student{
 
     /**
      *
-     * @return String
+     * @return String computeCourseGrade
      */
     public String computeCourseGrade() {
         if (getTestScore() >= MINIMUM_SCORE) {
-            return "Approved";
+            return "Passed";
         } else {
-            return "Didn't approve";
+            return "Failed";
         }
     }
 }

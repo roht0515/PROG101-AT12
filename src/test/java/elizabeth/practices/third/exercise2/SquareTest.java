@@ -2,20 +2,25 @@ package elizabeth.practices.third.exercise2;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 public class SquareTest {
     @Test
-    public void testAreaRectangle() {
-        Square figure = new Square("square",4);
-        figure.drawTxt();
-        double expected = 16.0;
-        assertEquals(expected, figure.area(),expected);
-    }
-    @Test
-    public void testTypeRectangle() {
-        Square square = new Square("square",4);
+    public void testAreaSquare() {
+        Figure square = new Square("S-1", "Square", 3);
         square.drawTxt();
-        String expected = "square";
-        assertEquals(expected, square.getFigureType());
+        double expected = 9.0;
+        assertEquals(expected, square.area(), 0);
+    }
+
+    @Test
+    public void testGetTag() {
+        Figure square = new Square("S-1", "Square", 3);
+        assertEquals("S-1", square.getTag());
+    }
+
+    @Test
+    public void testGetFigureType() {
+        Figure square = new Square("S-1", "Square", 3);
+        assertEquals("Square", square.getFigureType());
     }
 }

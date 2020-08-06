@@ -11,24 +11,36 @@ public class Position {
     }
 
     /** Initialization according to a coordinate */
-    Position(int row, int column) {
+    Position(final int row, final int column) {
         this.row = row;
         this.column = column;
     }
 
+    /**
+     *@return int getRow
+     */
     public int getRow() {
         return this.row;
     }
 
+    /**
+     *@return int getColumn
+     */
     public int getColumn() {
         return this.column;
     }
 
-    public void setRaw(int row) {
+    /**
+     *Method void setRaw
+     */
+    public void setRaw(final int row) {
         this.row = row;
     }
 
-    public void setColumn(int column) {
+    /**
+     *Method void setRaw
+     */
+    public void setColumn(final int column) {
         this.column = column;
     }
 

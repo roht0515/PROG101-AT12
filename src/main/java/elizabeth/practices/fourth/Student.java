@@ -3,40 +3,65 @@ package elizabeth.practices.fourth;
 public abstract class Student {
 
     private static final int NUM_OF_TESTS = 3;
-    protected String name;
-    protected int[] tests;
-    protected String CourseGrade;
+    private String name;
+    private int[] tests;
+    private String courseGrade;
 
-    public Student(){
-
-    }
-
-    public Student(final String name){
+    public Student(final String name) {
         this.name = name;
         tests = new int[NUM_OF_TESTS];
+        courseGrade = "";
     }
 
+    public Student() {
+    }
+
+    /**
+     *
+     * @return String getCourseGrade
+     */
     public String getCourseGrade() {
-        return CourseGrade;
+        return courseGrade;
     }
 
+    /**
+     *
+     * @return String getName
+     */
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    /**
+     *
+     * Method setName
+     */
+    public void setName(final String name) {
         this.name = name;
     }
-    public int getTestScore(){
+
+    /**
+     *
+     * @return int getTestScore
+     */
+    public int getTestScore() {
         int score = 0;
         for (int aux:tests) {
             score = score + aux;
         }
-        return (score/NUM_OF_TESTS);
+        return (score / NUM_OF_TESTS);
     }
 
-    public void setTestScore(){
-
+    /**
+     *
+     * Method setTestScore
+     */
+    public void setTestScore(final int num, final int score) {
+            if (num <= NUM_OF_TESTS && score >= 0) {
+                tests[num] = score;
+            } else {
+                throw new ArithmeticException("Negatives number is not allowed.");
+            }
     }
 
     public abstract String computeCourseGrade();
