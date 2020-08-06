@@ -1,7 +1,7 @@
 package laura.practices.third.geometricFigures;
 
-public class Square extends Rectangle{
-    
+public class Square extends Rectangle {
+
     private static final String LABEL = "Square";
 
     public Square(final String tag, final int size) {

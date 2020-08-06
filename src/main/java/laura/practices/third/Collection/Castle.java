@@ -3,7 +3,7 @@ package laura.practices.third.collection;
 /** Castle */
 public class Castle extends Figure {
 
-  private static final int ROWS =8;
+  private static final int ROWS = 8;
 
   public Castle(final int color) {
     super(color);
@@ -13,7 +13,7 @@ public class Castle extends Figure {
    */
   public void whoAmI() {
     super.whoAmI();
-    System.out.println("Castle");
+    System.out.print("\nCastle");
   }
 
   /**

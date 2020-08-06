@@ -1,0 +1,7 @@
+{
+    "java.home": "c:/Program Files/Java/jdk-14.0.2/",
+    "java.import.gradle.home": "c:/Gradle/",
+    "java.import.gradle.offline.enabled": true,
+    "java.import.gradle.user.home": "c:/Gradle/",
+    "gradle.debug": true
+}

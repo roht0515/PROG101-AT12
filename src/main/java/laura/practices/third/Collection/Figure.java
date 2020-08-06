@@ -32,9 +32,9 @@ abstract class Figure {
   /** For testing purposes */
   public void whoAmI() {
     if (color == Figure.WHITE) {
-      System.out.println("WHITE");
+      System.out.print("WHITE");
     } else {
-      System.out.println("BLACK");
+      System.out.print("BLACK");
     }
   }
 }

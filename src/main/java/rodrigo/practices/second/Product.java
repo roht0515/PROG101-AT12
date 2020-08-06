@@ -1,3 +1,4 @@
+package rodrigo.practices.second;
 
 public class Product {
     private String name;

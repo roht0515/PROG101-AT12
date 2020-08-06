@@ -1,6 +1,6 @@
 package laura.practices.third.geometricFigures;
 
-public class Rectangle extends GeometricFigure{
+public class Rectangle extends GeometricFigure {
 
     private static final String LABEL = "Rectangle";
     private int height;
@@ -11,7 +11,7 @@ public class Rectangle extends GeometricFigure{
         this.label = LABEL;
         this.height = height;
         this.width = width;
-        this.area = height*width;
+        this.area = height * width;
     }
 
     /**
@@ -28,11 +28,11 @@ public class Rectangle extends GeometricFigure{
     }
 
     /**
-     * 
+     *
      */
-    public void drawTxt(){
+    public void drawTxt() {
         String cad = "";
-        for(int a = 0; a < height; a++) {
+        for (int a = 0; a < height; a++) {
             for (int i = 0; i < width; i++) {
                 cad += "*";
             }

@@ -1,3 +1,5 @@
+package rodrigo.practices.first;
+
 public class Calculator4 {
     public static int add(String numbers) {
         try {

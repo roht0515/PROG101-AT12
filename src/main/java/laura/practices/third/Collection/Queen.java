@@ -11,7 +11,7 @@ public class Queen extends Figure {
    */
   public void whoAmI() {
     super.whoAmI();
-    System.out.println("Queen");
+    System.out.print("\nQueen");
   }
 
   /**

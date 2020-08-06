@@ -23,14 +23,14 @@ abstract class Figure {
   public String getFigureType() {
     return label;
   }
-  
+
   public double area() {
     return area;
   }
 
-  public void drawTxt() {      
+  public void drawTxt() {
   }
 
-  public void printDescription() {      
+  public void printDescription() {
   }
 }
