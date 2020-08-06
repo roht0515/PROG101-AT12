@@ -1,25 +1,28 @@
 package jhordan.Practices.Third.FigureRectanguleSquare;
 
 public abstract class GeometricFigure extends Figure {
-
     private String tag;
 
-    protected GeometricFigure() {
-    }
-
-
-    public final String printDescription(final String tag) {
-        return "Tag: " + tag;
-    }
-    /**Constructor that receives a descriptive label**/
     GeometricFigure(final String tag) {
         this.tag = tag;
     }
-
-    public final String getTag() {
+    /**returns the tag**/
+    @Override
+    public String getTag() {
         return tag;
     }
-    public final void setTag(final String tag) {
-        this.tag = tag;
+
+    public abstract String getFigureType();
+    public abstract double area();
+    public abstract void drawTxt();
+    /**return the description of the figure**/
+    public void printDescription() {
+        System.out.println("Tag:" + getTag() + "\n"
+                + "Figure Type:" + getFigureType() + "\n"
+                + "Area:" + area());
     }
+
+
+
+
 }

@@ -1,23 +1,16 @@
 package jhordan.Practices.Fourth;
 
 public abstract class Student {
+
     private String name;
     private int[] test;
     private String courseGrade;
-
 
     public Student(final String name, final int[] test) {
         this.name = name;
         this.test = test;
     }
-    /** return the name of the student **/
-    public String getName() {
-        return name;
-    }
-    /**set the attribute name**/
-    public void setName(final String name) {
-        this.name = name;
-    }
+
     /**get the testScore**/
     public int getTestScore(final int[] tests) {
         int result = 0;

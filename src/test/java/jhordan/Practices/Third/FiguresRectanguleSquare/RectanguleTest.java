@@ -2,8 +2,6 @@ package jhordan.Practices.Third.FiguresRectanguleSquare;
 import jhordan.Practices.Third.FigureRectanguleSquare.Rectangule;
 import org.junit.Test;
 
-import java.util.ArrayList;
-
 import static org.junit.Assert.assertEquals;
 
 public class RectanguleTest {
@@ -16,10 +14,10 @@ public class RectanguleTest {
     }
 
     @Test
-    public void testDrawTxt() {
+    public void testTextDrawed() {
         Rectangule rectangule = new Rectangule("c-5",5,2);
         String expected = "*****"+ "\n" +"*****"+"\n";
-        String actual = rectangule.drawTxt();
+        String actual = rectangule.textdrawed();
         assertEquals(expected,actual);
     }
 
@@ -31,13 +29,4 @@ public class RectanguleTest {
         assertEquals(expected,actual);
     }
 
-    @Test
-    public void testPrint() {
-        Rectangule rectangule = new Rectangule("c-5",5,2);
-        String expected = "Tag: c-5\n" +
-                "Figure Type: Rectangule\n" +
-                "Area: 10.0";
-        String actual = rectangule.printDescription();
-        assertEquals(expected,actual);
-    }
 }

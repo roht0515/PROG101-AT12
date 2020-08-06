@@ -1,8 +1,11 @@
 package jhordan.Practices.Third.FigureRectanguleSquare;
-/**
- * Defines the general behavior of a figure
- * @author JRM*/
-abstract class Figure {
-  /**it allows polymorfism to the subclasses**/
-   public abstract String printDescription();
-} // Figure
+
+public abstract class Figure {
+
+  public abstract String getTag();
+
+  public abstract String getFigureType();
+  public abstract double area();
+  public abstract void drawTxt();
+  public abstract void printDescription();
+}

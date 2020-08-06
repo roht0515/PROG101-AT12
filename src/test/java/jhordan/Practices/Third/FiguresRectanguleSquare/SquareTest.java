@@ -1,6 +1,5 @@
 package jhordan.Practices.Third.FiguresRectanguleSquare;
 
-import jhordan.Practices.Third.FigureRectanguleSquare.Rectangule;
 import jhordan.Practices.Third.FigureRectanguleSquare.Square;
 import org.junit.Test;
 
@@ -17,28 +16,19 @@ public class SquareTest {
     }
 
     @Test
-    public void testDrawTxt() {
+    public void testTextDrawed() {
         Square square = new Square("c-5", 2);
         String expected = "**"+"\n"+"**"+"\n";
-        String actual = square.drawTxt();
+        String actual = square.textdrawed();
         assertEquals(expected, actual);
     }
 
     @Test
     public void testGetType() {
         Square square = new Square("c-5", 2);
-        String expected = "square";
+        String expected = "Square";
         String actual = square.getFigureType();
         assertEquals(expected,actual);
     }
 
-    @Test
-    public void testPrint() {
-        Square square = new Square("c-5", 2);
-        String expected = "Tag: c-5\n" +
-                "Figure Type: square\n" +
-                "Area: 4.0";
-        String actual = square.printDescription();
-        assertEquals(expected,actual);
-    }
 }
