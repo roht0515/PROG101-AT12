@@ -1,24 +1,16 @@
 package angela.practices.third.figure;
 
-import angela.practices.third.inheritance.Figure;
-import angela.practices.third.inheritance.Position;
-
-public abstract class GeometricFigure extends Figure {
+public abstract class GeometricFigure implements Figure {
     private String tag;
     private String description;
     private String type;
     private double area;
 
-    public  GeometricFigure(final int color) {
-        super(color);
+    public GeometricFigure(final String tag) {
+        this.tag = tag;
     }
 
-    public GeometricFigure(final String type) {
-        super(1);
-        this.type = type;
-    }
-
-    public final void setDescription(final String description) {
+    protected final void setDescription(final String description) {
         this.description = description;
     }
 
@@ -26,38 +18,47 @@ public abstract class GeometricFigure extends Figure {
         return description;
     }
 
-    public final void setType(final String type) {
+    protected final void setFigureType(final String type) {
         this.type = type;
     }
 
-    public final String getType() {
+    public final String getFigureType() {
         return type;
     }
 
-    /**
-     * Castle movement We are supposing an empty board
-     */
-    public boolean move(final Position origin, final Position destination) {
-        return true;
-    }
-
     public final void printDescription() {
-        System.out.println("Tag : " + tag + "\n" + "Figure type : " + type + "\n" + "Area : " + area);
+        description = "Tag : " + tag + "\n" + "Figure type : " + type + "\n" + "Area : " + area();
+        System.out.println(description);
     }
 
     /**
      * @return string tag
      */
-    public String getTag() {
+    public final String getTag() {
         return tag;
     }
 
     /**
+     *
+     * @param tag
+     */
+    protected final void setTag(final String tag) {
+        this.tag = tag;
+    }
+    /**
      * @return double area
      */
-    public double getArea() {
+    public final double getArea() {
         return area;
     }
 
+    /**
+     *
+     * @param area
+     */
+    protected final void setArea(final double area) {
+        this.area = area;
+    }
     public abstract double area();
+
 }

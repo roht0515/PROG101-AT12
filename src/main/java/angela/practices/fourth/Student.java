@@ -1,7 +1,6 @@
 package angela.practices.fourth;
 
 public abstract class Student {
-    //public static int NUM_OF_STUDENTS;
     private String name;
     private static final int CANT_TESTS = 3;
     private int[] tests;
@@ -9,7 +8,6 @@ public abstract class Student {
     private int testScore;
 
     public Student() {
-        //NUM_OF_STUDENTS++;
     }
 
     public Student(final String name) {
