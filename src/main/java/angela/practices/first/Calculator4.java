@@ -1,11 +1,13 @@
 package angela.practices.first;
 
-public class Calculator4 {
+class Calculator4 {
     private static final int LIMITE = 1000;
     private static final int POS_SUB_STRING_INI = 3;
     private static final int POS_SUB_STRING_FIN = 4;
+    private String name;
 
-    public Calculator4() {
+    Calculator4() {
+        name = "Calculator";
     }
 
     public static boolean isInt(final String number) {
