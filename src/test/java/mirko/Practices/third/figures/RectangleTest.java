@@ -4,6 +4,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class RectangleTest {
+    
 	@Test
     public void testCreateARectangleObjectWithZeroBaseAndZeroHeightAreaExpectedZeroAndPrintDescription(){
     	Rectangle rectangle = new Rectangle( 0, 0);

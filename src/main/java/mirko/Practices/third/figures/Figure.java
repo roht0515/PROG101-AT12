@@ -1,7 +1,6 @@
 package figures;
 
 abstract class Figure {
-
   public abstract String getTag();
 
   public abstract String getFigureType();

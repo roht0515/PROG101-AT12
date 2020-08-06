@@ -30,6 +30,7 @@ public class GeometricFigure extends Figure {
     public final void setArea(final int area) {
         this.area = area;
     }
+    
     /**
     @return duble area;
     **/

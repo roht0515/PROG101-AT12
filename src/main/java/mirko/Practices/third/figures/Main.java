@@ -10,6 +10,7 @@ public class Main {
     static final int NUMBER_TWO = 2;
     static final int NUMBER_THREE = 3;
     private String name;
+    
     public Main() throws IOException {
         name = "";
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -35,19 +36,19 @@ public class Main {
                     break;
                 case NUMBER_TWO:
                     figure = new Square(1);
-            System.out.println("Enter a number in next line:");
-            figure.readFigureData(reader);
-            break;
-            case NUMBER_THREE:
-            if ((figure instanceof Rectangle) || (figure instanceof Square)) {
-            figure.printDescription();
-            figure.drawTxt();
-            } else {
-            System.out.println("Not figure created");
-            }
-            break;
-            default:
-            break;
+                    System.out.println("Enter a number in next line:");
+                    figure.readFigureData(reader);
+                    break;
+                case NUMBER_THREE:
+                    if ((figure instanceof Rectangle) || (figure instanceof Square)) {
+                        figure.printDescription();
+                        figure.drawTxt();
+                    } else {
+                        System.out.println("Not figure created");
+                    }
+                    break;
+                        default:
+                    break;
             }
         }
     }
