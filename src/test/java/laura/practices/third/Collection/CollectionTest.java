@@ -42,7 +42,7 @@ public class CollectionTest {
     public void testAddFiguresToCollection() {
         Collection collection = new Collection();
         collection.addFigure();
-        for (Figure figure: collection.figureArray) {
+        for (Figure figure: collection.getFigureArray()) {
             figure.whoAmI();
         }
     }

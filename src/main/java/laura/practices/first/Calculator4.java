@@ -2,6 +2,12 @@ package laura.practices.first;
 
 public class Calculator4 {
 
+    private String name;
+
+    public Calculator4() {
+        name = "Calculator";
+    }
+
     public static int add(final String numbers) {
         if (numbers.length() == 0) {
             return 0;

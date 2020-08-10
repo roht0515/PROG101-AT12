@@ -5,6 +5,9 @@ import java.util.Scanner;
 public class Rectangle extends GeometricFigure implements FigureTesting {
 
     private static final String LABEL = "Rectangle";
+    public static final int OPTION_THREE = 3;
+    public static final int OPTION_TWO = 2;
+    public static final int OPTION_ONE = 1;
     private int height;
     private int width;
     private int actualHeight = 0;
@@ -12,12 +15,17 @@ public class Rectangle extends GeometricFigure implements FigureTesting {
     private int lastHeight;
     private int lastWidth;
 
-    public Rectangle(final String tag, final int height, final int width) {
-        super(tag);
-        this.label = LABEL;
+    public Rectangle(final String tag, final String label, final int height, final int width) {
+        super(tag, label, height * width);
         this.height = height;
         this.width = width;
-        this.area = height * width;
+    }
+    public Rectangle(final String tag, final int height, final int width) {
+        super(tag, LABEL, height * width);
+        //this.label = label;
+        this.height = height;
+        this.width = width;
+        //this.area = height * width;
     }
 
     /**
@@ -36,10 +44,11 @@ public class Rectangle extends GeometricFigure implements FigureTesting {
     /**
      *
      */
+    @Override
     public void drawTxt() {
         String cad = "";
-        for (int a = 0; a < height; a++) {
-            for (int i = 0; i < width; i++) {
+        for (int a = 0; a < getHeight(); a++) {
+            for (int i = 0; i < getWidth(); i++) {
                 cad += "*";
             }
             cad = cad + "\n";
@@ -63,7 +72,7 @@ public class Rectangle extends GeometricFigure implements FigureTesting {
 
             switch (num) {
 
-                case 1:
+                case OPTION_ONE:
                     System.out.println("Rectangle");
                     System.out.println("Type the width of rectangle: ");
                     this.width = inKeyboard.nextInt();
@@ -73,7 +82,7 @@ public class Rectangle extends GeometricFigure implements FigureTesting {
                     actualHeight  = height;
                     drawTxt();
                     break;
-                case 2:
+                case OPTION_TWO:
                     System.out.println("Square");
                     System.out.println("Type the side of square: ");
                     side = inKeyboard.nextInt();
@@ -83,7 +92,7 @@ public class Rectangle extends GeometricFigure implements FigureTesting {
                     actualWidth = side;
                     drawTxt();
                     break;
-                case 3:
+                case OPTION_THREE:
                     printFigure();
                     break;
                 default:

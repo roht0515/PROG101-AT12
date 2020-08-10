@@ -4,33 +4,11 @@ package laura.practices.third.geometricFigures;
  * Defines the general behavior of a figure
  *
  */
-abstract class Figure {
+public abstract class Figure {
 
-  protected String tag;
-  protected String label;
-  protected double area;
-
-  /**
-   * @return String tag
-   */
-  public String getTag() {
-    return tag;
-  }
-
-  /**
-   * @return String label
-   */
-  public String getFigureType() {
-    return label;
-  }
-
-  public double area() {
-    return area;
-  }
-
-  public void drawTxt() {
-  }
-
-  public void printDescription() {
-  }
+  public abstract String getTag();
+  public abstract String getFigureType();
+  public abstract double area();
+  public abstract void drawTxt();
+  public abstract void printDescription();
 }

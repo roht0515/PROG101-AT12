@@ -4,14 +4,19 @@ import java.util.ArrayList;
 
 public class Collection {
 
-    public ArrayList<Figure> figureArray;
+    private ArrayList<Figure> figureArray;
     private static final int CANT_QUEEN = 2;
     private static final int CANT_CASTLE = 4;
 
     public Collection() {
         figureArray = new ArrayList<>();
     }
-
+    /**
+     * @return ArrayList<Figure> figureArray
+     */
+    public ArrayList<Figure> getFigureArray() {
+        return figureArray;
+    }
     /**
      * Method to addFigure
      */

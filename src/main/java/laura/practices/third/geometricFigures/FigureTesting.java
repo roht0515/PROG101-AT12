@@ -2,9 +2,14 @@ package laura.practices.third.geometricFigures;
 
 public interface FigureTesting {
 
-    public int RECTANGLE = 1;
-    public int SQUARE = 2;
+    int RECTANGLE = 1;
+    int SQUARE = 2;
 
-    public void printMenu();
-    public void printFigure();
+    void printMenu();
+    void printFigure();
+
+    static void main(final String[] args) {
+        Rectangle rectangle = new Rectangle("r-1", 2, 1);
+        rectangle.printMenu();
+    }
 }

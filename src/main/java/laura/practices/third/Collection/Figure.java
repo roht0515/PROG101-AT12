@@ -9,11 +9,10 @@ package laura.practices.third.collection;
 abstract class Figure {
   protected static final int WHITE = 0;
   protected static final int BLACK = 1;
-
-  protected int color;
+  private int color;
 
   /** Identifier name of a figure */
-  protected String identifier;
+  private String identifier;
 
   /** Every figure has a color */
   Figure(final int color) {
@@ -23,7 +22,10 @@ abstract class Figure {
 
   /** Get the figure color */
   public int getColor() {
-    return this.color;
+    return color;
+  }
+  public String getIdentifier() {
+    return identifier;
   }
 
   /** General figures behavior */

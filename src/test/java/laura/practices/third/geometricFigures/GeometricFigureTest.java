@@ -29,18 +29,18 @@ public class GeometricFigureTest {
     }
     
     @Test
-    public void testprintDescriptionGeometricFigure(){
+    public void testPrintDescriptionGeometricFigure(){
         GeometricFigure fGeometricFigure =new GeometricFigure("f");
         fGeometricFigure.printDescription();
-        String expected = "";
+        String expected = "Tag: f\nFigure Type: null\nArea: 0.0";
         String actual = outContent.toString();
         assertEquals(expected, actual);
     }
 
     @Test
-    public void testprintDescriptionRectangle(){
+    public void testPrintDescriptionRectangle(){
         String expected = "Tag: r-1\nFigure Type: Rectangle\nArea: 6.0";
-        rectangle.printDescription(rectangle);
+        rectangle.printDescription();
         assertEquals(expected, outContent.toString());
     }
 
@@ -54,7 +54,7 @@ public class GeometricFigureTest {
     @Test
     public void testprintDescriptionSquare(){
         String expected = "Tag: s-1\nFigure Type: Square\nArea: 4.0";
-        square.printDescription(square);
+        square.printDescription();
         assertEquals(expected, outContent.toString());
     }
 
