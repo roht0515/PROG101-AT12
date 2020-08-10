@@ -6,8 +6,8 @@ package laura.practices.third.geometricFigures;
  */
 abstract class Figure {
 
-  protected String tag = "";
-  protected String label = "";
+  protected String tag;
+  protected String label;
   protected double area;
 
   /**
