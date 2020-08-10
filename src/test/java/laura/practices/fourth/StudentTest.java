@@ -10,7 +10,7 @@ public class StudentTest {
     @Test
     public void testSetCantTestStudent() {
         student.setCantTest(1);
-        assertEquals(1, student.tests.length);
+        assertEquals(1, student.getTests().length);
     }
 
     @Test
@@ -22,7 +22,7 @@ public class StudentTest {
     @Test
     public void testSetMinNoteStudent() {
         student.setMinNote(51);
-        assertEquals(51, student.minNoteToAproval);
+        assertEquals(51, student.getMinNoteToAproval());
         
     }
 

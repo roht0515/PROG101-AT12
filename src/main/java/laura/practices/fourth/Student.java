@@ -4,9 +4,9 @@ public class Student {
 
     private int numOfTest;
     private String name;
-    protected int[]tests;
-    protected String courseGrade;
-    protected int minNoteToAproval;
+    private int[] tests;
+    private String courseGrade;
+    private int minNoteToAproval;
 
     public Student(final String name) {
         this.name = name;
@@ -25,6 +25,18 @@ public class Student {
     public String getName() {
         return name;
     }
+    /**
+     * @return int[] tests
+     */
+    public int[] getTests() {
+        return tests;
+    }
+    /**
+     * @return String courseGrade
+     */
+    public String courseGrade() {
+        return courseGrade;
+    }
      /**
      * @return int testCore
      */
@@ -32,6 +44,12 @@ public class Student {
         int score = 0;
         score = tests[pos];
         return score;
+    }
+    /**
+     * @return minNoteToAproval
+     */
+    public int getMinNoteToAproval() {
+        return minNoteToAproval;
     }
     /**
      * @param cantTest
@@ -57,7 +75,7 @@ public class Student {
     /**
      * Method to Set minNoteToAproval
      */
-    public void setMinNote(int minNoteToAprovalNote) {
+    public void setMinNote(final int minNoteToAprovalNote) {
         this.minNoteToAproval = minNoteToAprovalNote;
     }
     /**
